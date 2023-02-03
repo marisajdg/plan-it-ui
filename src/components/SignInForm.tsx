@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 
-function SignInPage() {
+function SignInForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
     return (
-        <div>
-            <div>Welcome!</div>
-            <form >
+        <form>
             <label>
                 EMAIL
                 <input value={email} onChange={(event) => { setEmail(event.target.value) }}/>
@@ -19,9 +16,8 @@ function SignInPage() {
             <div>{email}</div>
             <div>{password}</div>
             <button type="submit">SIGN IN</button>
-            </form>
-        </div>
+        </form>
     )
 }
 
-export default SignInPage
+export default SignInForm
