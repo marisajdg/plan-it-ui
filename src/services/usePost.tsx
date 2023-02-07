@@ -16,7 +16,7 @@ const usePost = (url: string, data: {}) => {
             setLoading(true);
             const resp = await fetch(url, {
                 method: "POST",
-                //headers: {"Content-Type": "application/json"},
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(data),
             })
             const resp2 = await resp.json();

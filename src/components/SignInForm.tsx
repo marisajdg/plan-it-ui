@@ -4,8 +4,10 @@ import usePost from "../services/usePost";
 const SignInForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    // how do the server knows that is email and password?? is it better to specify?
-    const {doPost, loading, error, response} = usePost("https://47e26fe6-cd84-4fc0-bf2f-07b70e7caddd.mock.pstmn.io/login", {email, password});
+    // how does the server knows that is email and password?? is it better to specify?
+    //localhost:1000/backend-api/login
+    const {doPost, loading, error, response} = usePost("http://localhost:1000/login", {email, password});
+    
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
